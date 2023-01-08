@@ -3,9 +3,7 @@ import Map from 'components/Map/Map.js'
 import 'leaflet-control-geocoder/dist/Control.Geocoder.css'
 import 'leaflet-control-geocoder/dist/Control.Geocoder.js'
 import { useState } from 'react'
-import { Route, Routes } from 'react-router-dom'
-import './App.scss'
-
+import "./App.scss"
 function App() {
   const [open, setOpen] = useState(true)
 

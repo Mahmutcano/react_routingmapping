@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { actionTypes } from 'reducer/store.js'
 
 const Form = () => {
-  const [state, dispatch] = useStateValue()
+  const [, dispatch] = useStateValue()
   const [form, setForm] = useState({
     name: '',
     latitude: '',

@@ -1,10 +1,8 @@
-import { Fragment, useCallback, useEffect, useState } from 'react'
+import { Fragment, useCallback } from 'react'
 import { Dialog, Transition } from '@headlessui/react'
 import { XMarkIcon } from '@heroicons/react/24/outline'
-import { friends } from '../../data/data.js'
 import { useStateValue } from 'context/StateProvider.js'
 import { actionTypes } from 'reducer/store.js'
-import { Link, useNavigate } from 'react-router-dom'
 import Form from 'components/FriendsForm/Form.js'
 import Avatar from 'assets/images/user.png'
 

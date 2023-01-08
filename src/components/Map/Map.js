@@ -1,17 +1,12 @@
-import React, { useEffect, useRef, useState } from 'react'
+import React from 'react'
 import {
   MapContainer,
   TileLayer,
-  Marker,
-  Popup,
-  ZoomControl,
 } from 'react-leaflet'
 import './Map.scss'
-import LeafletGeocode from './LeafletGeocode.js'
 import LeafletRoutingMachine from './LeafletRoutingMachine.js'
 import L from 'leaflet'
 import MarkerIcon from '../../assets/images/marker.png'
-import SideList from 'components/Friends/SideList.js'
 
 const position = [39.925533, 32.866287]
 
