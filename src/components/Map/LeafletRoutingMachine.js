@@ -11,14 +11,15 @@ const LeafletRoutingMachine = () => {
   const { addFriends } = state
 
   useEffect(() => {
-    if (!map) return
-    // Undefined
-    const routingControl = L.Routing.control({
-      serviceUrl: 'http://my-osrm-server/route/v1',
-      waypoints: [
-        L.latLng(39.925533, 32.866292),
-        L.latLng(addFriends.latitude, addFriends.longitude),
-      ],
+    // Call the latLng function with the desired start and end points
+    addFriends.map((item) => {
+      return latLng(39.925533, 32.866292, item.latitude, item.longitude)
+    })
+  }, [addFriends])
+
+  const latLng = (startLat, startLng, endLat, endLng) => {
+    L.Routing.control({
+      waypoints: [L.latLng(startLat, startLng), L.latLng(endLat, endLng)],
       lineOptions: {
         styles: [
           {
@@ -36,12 +37,8 @@ const LeafletRoutingMachine = () => {
       fitSelectedRoutes: false,
       showAlternatives: false,
     }).addTo(map)
-    // return routingControl.setWaypoints([
-    //   L.latLng(lat, lng),
-    //   L.latLng(this.props.destinationLat, this.props.destinationLng)
-    // ]);
-  
-  }, [map, addFriends])
+  }
+
   return null
 }
 

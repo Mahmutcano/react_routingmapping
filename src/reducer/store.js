@@ -1,7 +1,5 @@
-import { friends } from 'data/data.js'
-
 export const initialState = {
-  friendsLocation: { lat: 40.323464, lang: 36.552193 },
+  friendsLocation: {},
   addFriends: [],
 }
 
